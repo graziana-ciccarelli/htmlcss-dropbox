@@ -1,458 +1,618 @@
-/* styles.css */
+/* Stili di base e reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+    font-family: 'Open Sans', sans-serif;
     color: #333;
-  }
-  
-  .header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 20px;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
+}
+
+/* Utilità */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.centered-content-wrapper,
+.secondary-centered-wrapper {
+    max-width: 980px; /* Larghezza tipica per il contenuto centrale */
     margin: 0 auto;
-  }
-  
-  .header-left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    height: 30px;
-    margin-right: 20px;
-  }
-  
-  .nav-left ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-left ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-  }
-  
-  .nav-left ul li a:hover {
-    color: #0070e0;
-  }
-  
-  
-  .header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .nav-right ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-right ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-  }
-  
-  .nav-right ul li a:hover {
-    color: #0070e0;
-  }
-  
-  .header-actions {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .btn {
-    text-decoration: none;
-    padding: 5px 15px;
-    font-size: 14px;
-    text-align: center;
-  }
-  
-  
-  .btn.signup {
-    color: #ffffff;
-    background-color: #0070e0;
-  }
-  
-  .btn.signup:hover {
-    background-color: #005bb5;
-  }
-  
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    color: #333;
-  }
-  
-  
-  .main-section {
-    background-color: #e7f2fb;
-    padding: 40px 20px;
-  }
-  
-  .main-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 30px;
-  }
-  
-  .text-content {
-    max-width: 600px;
-  }
-  
-  .main-title {
-    font-size: 40px;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 20px;
-  }
-  
-  .main-paragraph {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .btn-primary {
+    padding: 20px 15px; 
+}
+
+.button-style-one {
     display: inline-block;
-    background-color: #007ee5;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
     text-decoration: none;
-    margin-bottom: 10px;
-  }
-  
-  .btn-primary:hover {
-    background-color: #005bb5;
-  }
-  
-  .cancel-text {
-    font-size: 14px;
-    color: #555;
-  }
-  
-  
-  .image-content {
-    flex: 1;
-  }
-  
-  
-  .main-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  
-  .arrow-down {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .arrow-down span {
-    animation: bounce 1.5s infinite;
-  }
-  
-  
-  
-  .text-content {
-      max-width: 100%;
-    }
-  
-  .image-content {
-      margin-top: 20px;
-    }
-  
-  
-  .pricing-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .billing-options {
-    margin-bottom: 20px;
-  }
-  
-  .billing-options label {
-    margin: 0 10px;
+    font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
-  }
-  
-  .pricing-cards {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    flex-wrap: nowrap; /* Mantiene le colonne sulla stessa riga */
-  }
-  
-  .card {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    width: 100%;
-    max-width: 350px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: justify;
-    display: flex;
-    flex-direction: column; /* Colonne con contenuto verticale */
-    justify-content: space-between; /* Spaziatura uniforme */
-  }
-  
-  .card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .btn-primary {
-    display: inline-block;
-    padding: 8px 15px;
-    color: #fff;
-    background: #007bff;
-    text-decoration: none;
-    margin-bottom: 15px; /* Spazio tra bottone e contenuto */
-    align-self: flex-start; /* Allinea il bottone a sinistra */
-  }
-  
-  .btn-primary:hover {
-    background: #0056b3;
-  }
-  
-  .price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  .price span {
-    font-size: 0.8rem;
-    font-weight: normal;
-    color: #666;
-  }
-  
-  .features,
-  .highlights {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-  }
-  
-  .features li,
-  .highlights li {
-    margin: 5px 0;
-  }
-  
-  hr {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 20px 0;
-  }
-  
-  
-  .contact-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  /* Stile per la carta Enterprise */
-  .enterprise-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: left;
-    margin-bottom: 40px;
-    
-  }
-  
-  .enterprise-card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .enterprise-card p {
-    margin-bottom: 10px;
-    line-height: 1.6;
-  }
-  
-  .btn-primary {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    background: #007bff;
-    text-decoration: none;
-    
-  }
-  
-  .btn-primary:hover {
-    background: #0056b3;
-  }
-  
-  /* Partner Section */
-  .partner-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20px;
-    text-align: left;
-  }
-  
-  .partner-image img {
-    max-width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; 
-    max-width: 500px;
-  }
-  
-  .partner-content {
-    flex: 1;
-    max-width: 600px;
-  }
-  
-  .partner-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    text-align: justify;
-  }
-  
-  .partner-content p {
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  .btn-secondary {
-    display: inline-block;
-    padding: 10px 20px;
-    color: black;
-    background: #fff;
-    text-decoration: none;
-    border: 1px solid black;
-   
-  }
-  
-  .btn-secondary:hover {
-    background: #007bff;
-    color: #fff;
-  }
-  
-  .final-heading {
-    font-size: 1.8rem;
-    margin-top: 40px;
-    color: #000;
-  }
-  
-  .container {
-    max-width: 1200px;
-    padding: 20px;
-    margin: 0 auto;
-  }
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 40px;
-  }
-  .column {
-    flex: 1;
-    max-width: 30%;
-    min-width: 250px;
-    margin: 10px;
-    text-align: center;
-  }
-  .column img {
-    max-width: 100%;
-    height: auto;
-  }
-  .column h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 20px 0 10px;
-  }
-  .column p {
-    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.primary-fill {
+    background-color: #0061FF;
+    color: white;
+    border: 1px solid #0061FF;
+}
+
+.primary-fill:hover {
+    background-color: #0056e6;
+}
+
+.no-fill {
+    background-color: transparent;
     color: #333;
-    text-align: justify;
-  }
-  
-  
-  .container-2 {
-      text-align: left;
-      padding: 50px 20px;
-  }
-  .container-2 h2 {
-      font-size: 2em;
-      font-weight: bold;
-  }
-  .container-2 a {
-      color: #0000EE;
-      text-decoration: none;
-  }
-  .footer {
-      background-color: #000;
-      color: #fff;
-      padding: 40px 20px;
-      
-  }
-  .footer .footer-columns {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      text-align: justify;
-  }
-  .footer .footer-column {
-      margin: 10px;
-  }
-  .footer .footer-column h3 {
-      font-size: 1.2em;
-      font-weight: bold;
-  }
-  .footer .footer-column ul {
-      list-style: none;
-      padding: 0;
-  }
-  .footer .footer-column ul li {
-      margin: 5px 0;
-  }
-  .footer .footer-bottom {
-      text-align: center;
-      margin-top: 20px;
-  }
-  
+    border: 1px solid #333;
+}
+
+.no-fill:hover {
+    background-color: #eee;
+}
+
+.reverse-fill {
+    background-color: white;
+    color: #333;
+    border: 1px solid white;
+}
+
+.reverse-fill:hover {
+    background-color: #f2f2f2;
+}
+
+/* --- Header --- */
+.page-top-bar {
+    background-color: white;
+    padding: 15px 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed; /* Rende la navbar fissa */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Assicura che sia sopra gli altri elementi */
+}
+
+.top-bar-left,
+.top-bar-right {
+    float: left;
+    height: 30px; /* Altezza fissa per allineamento */
+    display: flex;
+    align-items: center;
+}
+
+.top-bar-right {
+    float: right;
+}
+
+.logo-wrapper img {
+    height: 20px; /* Dimensione del logo */
+    vertical-align: middle;
+    padding-right: 15px;
+}
+
+.page-top-bar ul {
+    list-style: none;
+}
+
+.page-top-bar ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.page-top-bar ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.page-top-bar .button-box {
+    margin-left: 20px;
+}
+
+/* --- Hero Banner --- */
+#hero-banner {
+    background-color: #B4D0E7;
+    padding-top: 150px; /* Spazio per la navbar fissa */
+    padding-bottom: 80px;
+}
+
+#hero-banner h1 {
+    font-size: 3rem; /* O la dimensione che preferisci */
+    text-align: center;
+    margin-bottom: 40px;
+    /* Rimosso 'width: 70%;' per permettere al titolo di espandersi */
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap; /* Mantiene il testo su una singola riga */
+    /* Non usiamo overflow: hidden; o text-overflow: ellipsis; perché vogliamo che si legga tutto */
+}
+
+.hero-image-container {
+    width: 60%; /* Occupare più spazio per l'immagine */
+    float: right;
+    padding-left: 30px; /* Spazio tra immagine e testo */
+}
+
+.hero-image-container img {
+    max-width: 100%;
+    display: block;
+}
+
+#hero-banner p {
+    width: 40%;
+    float: left;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+#hero-banner .button-box {
+    width: 40%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#hero-banner .button-box div {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+#hero-banner h1 {
+    font-size: 2rem; /* Changed from 4rem to 3rem for a smaller size */
+    text-align: center;
+    margin-bottom: 40px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.down-arrow-icon {
+    width: 40%;
+    float: left;
+    font-size: 2.5rem;
+    color: #555;
+    text-align: center; /* Centra l'icona */
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+/* --- Pricing Plans Section --- */
+.pricing-plans-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.pricing-plans-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.billing-options {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.billing-options input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.billing-options span {
+    margin-right: 20px;
+}
+
+.plan-card-group {
+    margin-bottom: 50px;
+    /* FLEXBOX ADDITIONS/MODIFICATIONS FOR EQUAL HEIGHT CARDS */
+    display: flex; /* Makes the container a flex container */
+    flex-wrap: wrap; /* Allows cards to wrap to multiple rows */
+    justify-content: space-between; /* Distributes space between cards */
+    align-items: stretch; /* Crucial for making items stretch to the same height */
+}
+
+.plan-card {
+    width: calc(33.33% - 20px); /* 3 columns with spacing */
+    /* REMOVED float: left; - Flexbox handles layout */
+    border: 1px solid #dcdcdc;
+    /* REMOVED margin-right: 30px; - Flexbox handles spacing */
+    border-radius: 5px;
+    overflow: hidden; 
+    margin-bottom: 30px; /* Keep bottom margin for spacing between rows */
+}
+
+/* REMOVED this rule, as flexbox now handles margin distribution */
+/* .plan-card.individual-card:nth-child(3n) { 
+    margin-right: 0;
+} */
+
+.card-title-bar {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #dcdcdc;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.card-title-bar i {
+    margin-right: 5px;
+}
+
+.card-main-content {
+    padding: 30px;
+    /* Add flex-grow to content to push remaining content down if needed for consistent height */
+    display: flex; /* Make content itself a flex container */
+    flex-direction: column; /* Stack items vertically */
+    flex-grow: 1; /* Allow content to grow and fill available space */
+}
+
+.plan-name {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.plan-price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.plan-price section { 
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #666;
+    margin-top: 5px;
+    line-height: 1.3;
+}
+
+.plan-features-list {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.feature-item i {
+    margin-right: 10px;
+    color: #666;
+    width: 20px; 
+    text-align: center;
+}
+
+.feature-item.main-features span {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 30px); 
+}
+
+.plan-card .button-box {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: auto; /* Pushes the button box to the bottom of the card content */
+}
+
+.plan-card .button-box .button-style-one {
+    width: 100%;
+    text-align: center;
+}
+
+.purchase-info {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.purchase-info a {
+    color: #0061FF;
+    text-decoration: none;
+}
+
+.purchase-info a:hover {
+    text-decoration: underline;
+}
+
+.plan-highlights {
+    padding-top: 30px;
+    border-top: 1px solid #dcdcdc;
+    margin-top: auto; /* Pushes plan highlights to the bottom of the card */
+}
+
+.plan-highlights h4 {
+    margin-bottom: 15px;
+}
+
+.plan-highlights ul {
+    list-style: none;
+}
+
+.plan-highlights ul li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.plan-highlights ul li i {
+    color: #0061FF;
+    margin-right: 10px;
+}
+
+.plan-highlights ul li span {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 30px);
+}
+
+.plan-card.full-width-card {
+    width: 100%;
+    margin-right: 0;
+}
+
+.plan-card.full-width-card .card-main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    flex-direction: row; /* Ensure it's a row for this specific card */
+}
+
+.plan-card.full-width-card .plan-name {
+    font-size: 2.2rem;
+    width: 40%;
+}
+
+.plan-card.full-width-card .button-box {
+    width: auto; 
+    flex-shrink: 0;
+    margin-top: 0; /* Override auto margin for this card */
+}
+
+.plan-card.full-width-card .plan-tagline {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    width: 100%; 
+}
+
+.plan-card.full-width-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    width: 100%; 
+}
+
+/* --- Partner Section --- */
+.partner-image-area {
+    width: 50%;
+    float: left;
+    padding-right: 30px;
+}
+
+.partner-image-area img {
+    max-width: 100%;
+    display: block;
+}
+
+.partner-text-content {
+    width: 50%;
+    float: right;
+    padding-left: 30px;
+}
+
+.partner-text-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.partner-text-content p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* --- Feature Showcase --- */
+.feature-showcase {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.showcase-heading {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.feature-item-card {
+    width: calc(33.33% - 20px);
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 40px;
+}
+
+.feature-item-card:nth-child(3n) { 
+    margin-right: 0;
+}
+
+.card-image-wrapper img {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.card-text-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.card-text-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* --- Client Testimonials --- */
+.client-testimonials-heading {
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+.client-testimonials-heading h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.client-testimonials-heading a {
+    color: #0061FF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.client-testimonials-heading a:hover {
+    text-decoration: underline;
+}
+
+/* These classes were in your HTML but not used for a specific client testimonials section layout.
+   They are left here for completeness based on your provided CSS, but you might want to integrate
+   a grid or flexbox layout for multiple testimonials if you plan to add them. */
+.testimonial-logo {
+    width: 150px; 
+    height: auto; 
+    margin-bottom: 20px;
+}
+
+.testimonial-logo img {
+    max-width: 100%;
+    display: block;
+    filter: none;
+}
+
+.testimonial-author {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.free-trial-banner {
+    background-color: #B4D0E7;
+    padding: 80px 0;
+    margin-top: 80px;
+}
+
+.free-trial-banner h2 {
+    font-size: 2.5rem;
+    width: 50%;
+    float: left;
+    color: #61082B;
+}
+
+.free-trial-banner .button-box {
+    width: 50%;
+    float: right;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    height: 100px; 
+}
+
+/* --- FAQ Section (not present in your HTML, but styles provided) --- */
+/* If you add an FAQ section to your HTML, these styles will apply. */
+.faq-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.faq-section h3 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.faq-question-item {
+    padding: 20px 0;
+    border-top: 1px solid #dcdcdc;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question-item:last-child {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.question-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: calc(100% - 40px);
+}
+
+.faq-question-item i {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* --- Footer --- */
+.main-footer-area {
+    background-color: #000;
+    color: white;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+.footer-column {
+    width: calc(20% - 15px); /* 5 columns with spacing */
+    float: left;
+    margin-right: 15px;
+}
+
+.footer-column:last-child {
+    margin-right: 0;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.language-selector {
+    padding-top: 50px;
+    border-top: 1px solid #333;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.language-selector i {
+    margin-right: 5px;
+}
+
+.language-selector a {
+    color: #ccc;
+    margin-left: 10px;
+}
